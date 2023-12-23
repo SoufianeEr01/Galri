@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Ajoutez votre code CSS ici */
+    .gallery-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    figure {
+      text-align: center;
+      margin: 0;
+    }
+
+    figcaption {
+      display: none;
+    }
+  </style>
+  <title>Interactive Photo Gallery</title>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <figure tabindex="0" onmouseover="showCaption(this)" onmouseleave="hideCaption(this)" onfocus="showCaption(this)" onblur="hideCaption(this)">
+      <img src="image1.jpg" alt="Image 1">
+      <figcaption>This is Image 1</figcaption>
+    </figure>
+
+    <figure tabindex="0" onmouseover="showCaption(this)" onmouseleave="hideCaption(this)" onfocus="showCaption(this)" onblur="hideCaption(this)">
+      <img src="image2.jpg" alt="Image 2">
+      <figcaption>This is Image 2</figcaption>
+    </figure>
+
+    <!-- Ajoutez plus de blocs figure pour d'autres images -->
+
+  </div>
+
+  <script>
+    // Ajoutez votre code JavaScript ici
+    function showCaption(figure) {
+      var figcaption = figure.querySelector('figcaption');
+      figcaption.style.display = 'block';
+    }
+
+    function hideCaption(figure) {
+      var figcaption = figure.querySelector('figcaption');
+      figcaption.style.display = 'none';
+    }
+
+    // Ajoutez ici votre code pour l'écouteur onload et la boucle for pour tabindex
+  </script>
+
+</body>
+</html>
